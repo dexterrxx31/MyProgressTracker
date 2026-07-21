@@ -1,7 +1,7 @@
 {
   "name": "30-Day Study Tracker",
   "short_name": "Study Tracker",
-  "description": "Track a 30-day OS, DBMS, Computer Networks and OOPs study plan.",
+  "description": "Track 7 self-paced 30-day study plans — CS Fundamentals, DSA, Low- & High-Level System Design, RAG for AI, Kubernetes, and Java/Spring/Python.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
