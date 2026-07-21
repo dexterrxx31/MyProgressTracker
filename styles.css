@@ -100,9 +100,64 @@ h1 {
   box-shadow: 0 0 22px rgba(255, 90, 60, 0.18);
 }
 
+/* ---------------- Plan tabs ---------------- */
+.plan-tabs {
+  margin-top: 22px;
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.plan-tabs::-webkit-scrollbar { height: 6px; }
+.plan-tabs::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+
+.plan-tab {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 9px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.1s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+.plan-tab:hover { color: var(--text); border-color: var(--border-strong); }
+.plan-tab:active { transform: translateY(1px); }
+.plan-tab .tab-emoji { font-size: 1rem; }
+.plan-tab .tab-pct {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: rgba(10, 14, 28, 0.6);
+  border: 1px solid var(--border);
+  padding: 1px 7px;
+  border-radius: 999px;
+}
+.plan-tab.active {
+  color: #fff;
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card-solid), var(--card-solid)) padding-box,
+    linear-gradient(120deg, var(--accent), var(--accent-2)) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 0 22px rgba(56, 225, 255, 0.22);
+}
+.plan-tab.active .tab-pct { color: var(--accent); border-color: rgba(56, 225, 255, 0.35); }
+
 /* ---------------- Overall progress ---------------- */
 .overall {
-  margin-top: 26px;
+  margin-top: 22px;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
